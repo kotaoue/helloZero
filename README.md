@@ -27,3 +27,11 @@ vim src/main.0
 zero import
 zero check
 ```
+
+## build
+
+```sh
+zero build --emit exe --target linux-musl-x64 --out .zero/out/app
+./.zero/out/app 
+zsh: exec format error: ./.zero/out/app
+```
