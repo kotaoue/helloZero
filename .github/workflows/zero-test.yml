@@ -1,0 +1,40 @@
+name: Zero Test
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+env:
+  ZERO_VERSION: v0.3.4
+  ZERO_ASSET: zero-linux-x64
+  ZERO_SHA256: 84a3c79d482260ee15660a49fc6b904afc927a230d05a4263039dd4dd1360e87
+
+jobs:
+  zero-test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        package:
+          - helloworld
+          - examples/add
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Zero
+        run: |
+          curl -fsSLo zero "https://github.com/vercel-labs/zerolang/releases/download/${ZERO_VERSION}/${ZERO_ASSET}"
+          echo "${ZERO_SHA256}  zero" | sha256sum --check --
+          install -Dm755 zero "$HOME/.local/bin/zero"
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Show Zero version
+        run: zero --version
+
+      - name: Run zero test
+        working-directory: ${{ matrix.package }}
+        run: zero test
