@@ -54,6 +54,6 @@ zero skills
 
 ## Key Takeaways
 
-- like Go, zeroLang seems possible to build from the same source code on both Linux and Mac is Good.
-- .graph is binary, Managing binaries code as binaries doesn't play well with Git is not Good.
-- The writing experience is similar to C or Rust. It’s not bad, but it’s not best.
+- Like Go, Zerolang can be built from the same source on both Linux and Mac, which is good.
+- `.graph` is binary, and managing binary source artifacts in Git is not ideal.
+- The writing experience is similar to C or Rust. It is not bad, but it is not the best.
