@@ -28,7 +28,7 @@ zero import
 zero check
 ```
 
-## build
+### build
 
 ```sh
 zero doctor
@@ -40,4 +40,10 @@ zero build --emit exe --target linux-musl-x64 --out .zero/out/app
 zero build --emit exe --target darwin-arm64 --out .zero/out/app
 
 ./.zero/out/app
+```
+
+### Skills
+
+```sh
+zero skills
 ```
