@@ -35,3 +35,13 @@ functions:
 
 tip: add --handles to list stmt and param patch handles; patch ops: zero patch --op help
 ```
+
+```sh
+ zero patch /tmp/add-cli.patch
+
+/tmp/add-cli.patch:1:1 BLD002: graph patch requires patch operations
+  expected: one patch source: file, --op, --patch-text, --replace-fn, --replace-in-fn, or --rewrite
+  actual: missing patch input
+  help: pass a zero-program-graph-patch v1 file, one or more --op lines, --replace-fn with --body-file, or --replace-in-fn with --old and --new
+  explain: zero explain BLD002
+```
