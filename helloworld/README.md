@@ -38,16 +38,10 @@ functions:
 tip: add --handles to list stmt and param patch handles; patch ops: zero patch --op help
 ```
 
-`zero patch /tmp/add-cli.patch` applies a patch file. If BLD002 appears, the patch is empty or malformed.
+`zero patch --replace-in-fn ...` edits `main` directly in this package (run it in `helloworld`).
 
 ```sh
-zero patch /tmp/add-cli.patch
-
-/tmp/add-cli.patch:1:1 BLD002: graph patch requires patch operations
-  expected: one patch source: file, --op, --patch-text, --replace-fn, --replace-in-fn, or --rewrite
-  actual: missing patch input
-  help: pass a zero-program-graph-patch v1 file, one or more --op lines, --replace-fn with --body-file, or --replace-in-fn with --old and --new
-  explain: zero explain BLD002
+zero patch --replace-in-fn main --old 'hello from zero\n' --new 'hello world from zero\n'
 ```
 
 `zero run -- 40 2` runs with args. If the program does not read args, they have no effect.
