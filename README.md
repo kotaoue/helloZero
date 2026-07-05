@@ -22,10 +22,14 @@ zero test
 ## Development
 
 ```sh
+zero init --template cli
+zero patch --op 'addMain'
 zero export
 vim src/main.0
 zero import
 zero check
+zero test
+zero run
 ```
 
 ### build
