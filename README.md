@@ -51,3 +51,8 @@ zero build --emit exe --target darwin-arm64 --out .zero/out/app
 ```sh
 zero skills
 ```
+
+## Key Takeaways
+
+- like Go, zeroLang seems possible to build from the same source code on both Linux and Mac is Good.
+- .graph is binary, Managing binaries code as binaries doesn't play well with Git is not Good.
