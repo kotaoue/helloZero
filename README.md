@@ -14,7 +14,16 @@ zero --version
 
 ```sh
 zero view --fn main
-zero export
+
 zero check
 zero test
+```
+
+## Development
+
+```sh
+zero export
+vim src/main.0
+zero import
+zero check
 ```
