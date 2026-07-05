@@ -23,6 +23,8 @@ zero export
 
 ## Helloworld
 
+`zero query --fn main` shows the `main` function summary (signature, calls, and handles).
+
 ```sh
 zero query --fn main
 query: fn:main
