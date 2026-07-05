@@ -31,11 +31,13 @@ zero check
 ## build
 
 ```sh
+zero doctor
+
 # Linux x64
 zero build --emit exe --target linux-musl-x64 --out .zero/out/app
 
 # Mac
 zero build --emit exe --target darwin-arm64 --out .zero/out/app
 
-./.zero/out/app 
+./.zero/out/app
 ```
