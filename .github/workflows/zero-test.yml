@@ -1,0 +1,30 @@
+name: Zero Test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  zero-test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        package:
+          - helloworld
+          - examples/add
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Zero
+        run: |
+          curl -fsSL https://zerolang.ai/install.sh | bash
+          echo "$HOME/.zero/bin" >> "$GITHUB_PATH"
+
+      - name: Show Zero version
+        run: zero --version
+
+      - name: Run zero test
+        working-directory: ${{ matrix.package }}
+        run: zero test
