@@ -2,7 +2,7 @@
 
 Helloworld for [zerolang](https://zerolang.ai/)
 
-## Initialize
+## Installation
 
 ```sh
 curl -fsSL https://zerolang.ai/install.sh | bash
