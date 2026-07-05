@@ -57,3 +57,4 @@ zero skills
 - Like Go, Zerolang can be built from the same source on both Linux and Mac, which is good.
 - `.graph` is binary, and managing binary source artifacts in Git is not ideal.
 - The writing experience is similar to C or Rust. It is not bad, but it is not the best.
+- I felt "[examples](https://zerolang.ai/examples)" were the core concept—an attempt to improve generation accuracy by leveraging officially recommended coding patterns for a new language.
